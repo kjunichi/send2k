@@ -7,7 +7,7 @@ var obj = plist.parse(fs.readFileSync('url.plist','utf8'));
 
 var lista = obj.Children;
 //console.dir(lista);
-console.log("lista.length = "+lista.length);
+//console.log("lista.length = "+lista.length);
 var i;
 for(i = 0; i < lista.length; i++) {
 	//console.dir(lista[i].Title);
@@ -20,6 +20,6 @@ var rl = lista[i].Children;
 
 for(i =0;i<rl.length;i++){
 	if(!rl[i].ReadingList.DateLastViewed) {
-		console.log(rl[i].URIDictionary.title, rl[i].URLString);    
+		console.log(rl[i].URLString);    
 	}
 }
